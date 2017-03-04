@@ -4944,11 +4944,11 @@ local base = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 		["Cost"] = {["Neutral"] = 3,["Blue"] = 2,},
 		["Effect"] = {
 			Name = "Jagged Arrow",
-			Description = "Lock a target fighter for 1 turn.",
+			Description = "Lower the power of a target fighter by 400.",
 			["Type"] = "OnSummon",
-			["Power"] = "Lock",
+			["Power"] = "Weaken",
 			Target = "Single",
-			Increase = 1
+			Increase = 400
 		},
 		["Bio"] = "Korblox arrows are made of a powerful ore known as Iron. Check up with your GP for symptoms if you get shot by one.",
 	},
