@@ -4944,11 +4944,11 @@ local base = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 		["Cost"] = {["Neutral"] = 3,["Blue"] = 2,},
 		["Effect"] = {
 			Name = "Jagged Arrow",
-			Description = "Lower the attack of a target fighter by 400.",
+			Description = "Lock a target fighter for 1 turn.",
 			["Type"] = "OnSummon",
-			["Power"] = "Weaken",
+			["Power"] = "Lock",
 			Target = "Single",
-			Increase = 400
+			Increase = 1
 		},
 		["Bio"] = "Korblox arrows are made of a powerful ore known as Iron. Check up with your GP for symptoms if you get shot by one.",
 	},
@@ -4956,8 +4956,8 @@ local base = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 	["Korblox General"] = {
 		["Id"] = 292787916,
 		["Name"] = "Korblox General",
-		["Health"] = 500,
-		["Power"] = 400,
+		["Health"] = 700,
+		["Power"] = 200,
 		["Rarity"] = "Common",
 		["AttackEffect"] = "Punch1",
 		["Archetype"] = "Korblox",
@@ -4965,14 +4965,26 @@ local base = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 		["Cost"] = {["Neutral"] = 2,["Blue"] = 3,},
 		["Effect"] = {
 			Name = "Instill",
-			Description = "Increase the Attack of a target fighter by 250.",
-			["Type"] = "OnSummon",
-			["Power"] = "Strengthen",
-			Target = "Single",
-			Increase = 250
+			Description = "Shield. When this card's shield is destroyed, it becomes a 400/500.",
+			["Type"] = "OnDeath",
+			["Power"] = {{"Summon","KorbloxGeneralToken"},{"Damage",9999,"Self"}},
+			Target = "Ally",
 		},
-		["Bio"] = "CHARGE FORWARD!",
+		["Bio"] = "STAND GUARD!",
 	},
+	
+	["KorbloxGeneralToken"] = {
+		["Id"] = 292787916,
+		["Name"] = "Korblox General",
+		["Health"] = 400,
+		["Power"] = 500,
+		["Rarity"] = "Token",
+		["AttackEffect"] = "Punch1",
+		["Archetype"] = "Korblox",
+		["Color"] = "Blue",
+		["Cost"] = {["Neutral"] = 2,["Blue"] = 3,},
+		["Bio"] = "CHARGE FORWARD!",
+	},	
 	
 	["Korblox Defender"] = {
 		["Id"] = 292778270,
@@ -4986,11 +4998,11 @@ local base = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 		["Cost"] = {["Blue"] = 3,},
 		["Effect"] = {
 			Name = "Quick Shot",
-			Description = "Increase the Health of all Korblox by 350.",
+			Description = "Increase the Health of all blue fighters by 250.",
 			["Type"] = "OnSummon",
 			["Power"] = "Heal",
-			Target = "Archetype",
-			Increase = 350
+			Target = "ColorBlue",
+			Increase = 250
 		},
 		["Bio"] = "CHARGE NOWHERE! STAND GROUND!",
 	},
@@ -5013,10 +5025,10 @@ local base = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 		["Cost"] = {["Neutral"] = 3,["Blue"] = 5,},
 		["Effect"] = {
 			Name = "Quick Shot",
-			Description = "lower the attack of all non-Korblox fighters by 500.",
+			Description = "lower the attack of all non-blue fighters by 500.",
 			["Type"] = "OnSummon",
 			["Power"] = "Weaken",
-			Target = "NotArchetype",
+			Target = "NotColorBlue",
 			Increase = 500
 		},
 		["Bio"] = "Regardless of how threatening he looks. He just wants a hug. But everyone he comes near dies, hence the nickname.",
@@ -5049,17 +5061,17 @@ local base = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 		["Name"] = "Korblox Archmage",
 		["Health"] = 650,
 		["Power"] = 500,
-		["Rarity"] = "Rare",
+		["Rarity"] = "Epic",
 		["AttackEffect"] = "Punch1",
 		["Archetype"] = "Korblox",
 		["Color"] = "Blue",
 		["Cost"] = {["Neutral"] = 4, ["Blue"] = 4,},
 		["Effect"] = {
 			Name = "Quick Shot",
-			Description = "Unlock all Korblox fighters. Add a random Korblox card to your hand.",
+			Description = "Unlock all blue fighters. Add a random blue card to your hand.",
 			["Type"] = "OnSummon",
-			["Power"] = {{"Unlock",999},{"RandomAdd","Korblox"}},
-			Target = "Archetype",
+			["Power"] = {{"Unlock",999},{"RandomAdd","ColorBlue"}},
+			Target = "ColorBlue",
 		},
 		["Bio"] = "He's a regular attendee of the Beard Grooming Club. His next beard style will be the Fu Manchu.",
 	},
@@ -12243,7 +12255,7 @@ local base = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 		["Cost"] = {["Neutral"] = 1,["Blue"] = 4,},
 		["Effect"] = {
 			Name = "Demoralising Chant",
-			Description = "lower the attack of a target fighter by 500.",
+			Description = "Lower the attack of a target fighter by 500.",
 			["Type"] = "OnSummon",
 			["Power"] = "Weaken",
 			Target = "Single",
