@@ -1369,8 +1369,8 @@ local tentwelvesixteen = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
        	["Rarity"] = "Common",
        	["AttackEffect"] = "PunchKick",
        	["Color"] = "Neutral",
-		["Token"] = true,
-		["Cost"] = {["Neutral"] = 4,},
+	["Token"] = true,
+	["Cost"] = {["Neutral"] = 4,},
         ["Effect"] = {
 			Name = "Hellfire",
 			Description = "When this card dies, gain 4 White icons. This card can't generate icons naturally.",
@@ -1960,7 +1960,7 @@ local tentwelvesixteen = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 			["Power"] = {{"Summon","Bandi2"}},
 			Target = "Ally",
 		},
-		["Bio"] = [[Or a zombie card.]],
+		["Bio"] = [[...Or a zombie card.]],
 	},
 
 	["Bandi2"] = {
@@ -1979,7 +1979,7 @@ local tentwelvesixteen = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 			["Power"] = {{"Summon","Bandi3"}},
 			Target = "Ally",
 		},
-		["Bio"] = [[Or a rare card.]],
+		["Bio"] = [[...Or a rare card.]],
 	},
 
 	["Bandi3"] = {
@@ -1998,7 +1998,7 @@ local tentwelvesixteen = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 			["Power"] = {{"Summon","Bandi4"}},
 			Target = "Ally",
 		},
-		["Bio"] = [[Or a fun card.]],
+		["Bio"] = [[...Or a fun card.]],
 	},
 
 	["Bandi4"] = {
@@ -2010,7 +2010,7 @@ local tentwelvesixteen = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 		["AttackEffect"] = "Punchkick",
 		["Color"] = "Green", 
 		["Cost"] = {["Green"] = 8,},
-		["Bio"] = [[Or a good card.]],
+		["Bio"] = [[...Or a good card.]],
 	},
 
 
@@ -2256,7 +2256,7 @@ local tentwelvesixteen = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 		["Id"] = 785620644,
 		["Name"] = "MrEyeso",
 		["Health"] = 750,
-		["Power"] = 300,
+		["Power"] = 350,
 		["Rarity"] = "Epic",
 		["AttackEffect"] = "Punchkick",
 		["Color"] = "Blue", 
@@ -2446,7 +2446,7 @@ local tentwelvesixteen = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 			Name = "Life fam",
 			Description = "Enters play locked for 6 turns.",
 			["Type"] = "OnSummon",
-			["Power"] = {{"Lock",6}},
+			["Power"] = {{"Lock",3}},
 			Target = "Self",
 		},
 		["Bio"] = [[Mlg Strats are to be abound.]],
@@ -2661,9 +2661,9 @@ local tentwelvesixteen = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 		["Cost"] = {["Neutral"] = 3, ["Yellow"] = 7,},
 		["Effect"] = {
 			Name = "Life fam",
-			Description = "Whenever Dairingpoophead, Tix God destroys a fighter, summon two Pittacium Acolythus.",
+			Description = "Whenever Dairingpoophead, Tix God destroys a fighter, summon a Pittacium Acolythus.",
 			["Type"] = "OnDestroy",
-			["Power"] = {{"Summon","Lord of GreedV2"},{"Summon","Lord of GreedV2"}},
+			["Power"] = {{"Summon","Lord of GreedV2"}},
 			Target = "Ally",
 		},
 		["Bio"] = "Go forth my tix minions, make ROBLOX bow down to us until tix rise once again!",
