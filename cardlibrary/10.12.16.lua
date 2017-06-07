@@ -2444,7 +2444,7 @@ local tentwelvesixteen = { -- CARD_ID, NAME, POWER, HEALTH, RARITY,BIO
 		["Cost"] = {["Blue"] = 3,},
 		["Effect"] = {
 			Name = "Life fam",
-			Description = "Enters play locked for 6 turns.",
+			Description = "Enters play locked for 3 turns.",
 			["Type"] = "OnSummon",
 			["Power"] = {{"Lock",3}},
 			Target = "Self",
